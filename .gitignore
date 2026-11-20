@@ -1,0 +1,59 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.vscode/
+.idea/
+
+# Downloaded data and generated training artifacts
+/data/raw/
+/data/processed/
+/data/generated/
+/data/cache/
+/data/scores/
+checkpoints/
+weights/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.gguf
+*.onnx
+
+# Caches, logs, and raw experiment output
+.cache/
+hf_cache/
+wandb/
+mlruns/
+runs/
+outputs/
+logs/
+*.log
+/results/raw/
+/results/figures/
+
+# Operating-system and office temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*

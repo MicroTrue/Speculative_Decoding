@@ -1,0 +1,22 @@
+name: Bug report
+description: Report an implementation, data, or reproducibility problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps and configuration
+      description: Include the command, code commit, model/data revisions, and minimal input where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and logs
+      description: Include hardware, precision, package versions, and relevant output. Remove credentials and private data.

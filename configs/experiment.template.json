@@ -1,0 +1,69 @@
+{
+  "status": "template_not_ready_to_run",
+  "run_id": null,
+  "code_commit": null,
+  "seed": 42,
+  "models": {
+    "target": {"id": "Qwen/Qwen2.5-3B-Instruct", "revision": null},
+    "draft": {"id": "Qwen/Qwen2.5-0.5B-Instruct", "revision": null},
+    "tokenizer": {"id": null, "revision": null, "chat_template": null},
+    "tokenizer_compatibility_verified": false
+  },
+  "runtime": {
+    "python_version": null,
+    "framework_versions": {},
+    "gpu": null,
+    "gpu_count": 1,
+    "precision": null,
+    "batch_size": 1
+  },
+  "data": {
+    "dataset": null,
+    "version": null,
+    "split": null,
+    "source_document_ids_or_manifest": null,
+    "held_out_seed_manifest": null,
+    "context_lengths_tokens": [1024, 2048, 4096, 8192],
+    "fixed_context_length_tokens": 8192,
+    "evidence_distances_tokens": [128, 512, 2048, 4096, 7168]
+  },
+  "training": {
+    "variant": null,
+    "initial_checkpoint": null,
+    "training_tokens": null,
+    "short_long_sampling": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "gradient_accumulation_steps": null,
+    "lora": {"enabled": null, "rank": null, "target_modules": null},
+    "sensitivity": {
+      "local_window_tokens": null,
+      "candidate_local_windows_tokens": [128, 512, 1024],
+      "normalization": null,
+      "clip": null,
+      "alpha": null,
+      "position_control": null
+    },
+    "m4_component_coefficients": {"short": null, "long": null, "dependency": null}
+  },
+  "decoding": {
+    "policy": "greedy",
+    "draft_length_tokens": null,
+    "max_new_tokens": null,
+    "stopping_rules": null,
+    "output_equivalence_verified": false
+  },
+  "measurement": {
+    "warmup_runs": null,
+    "timed_repetitions": null,
+    "gpu_synchronization": null,
+    "prefill_decode_separation": null,
+    "memory_measurement_method": null
+  },
+  "artifacts": {
+    "checkpoint_id": null,
+    "raw_results_uri": null,
+    "training_gpu_hours": null,
+    "teacher_scoring_gpu_hours": null
+  }
+}

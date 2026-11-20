@@ -1,0 +1,30 @@
+name: Research experiment
+description: Plan and track a reproducible experiment or milestone.
+title: "[Experiment] "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question and milestone
+      description: Identify the hypothesis, stage, and completion gate.
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Comparison and controls
+      description: Identify variants, datasets/splits, training budgets, and controlled settings.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Measurements and completion criteria
+      description: State what evidence will answer the question, including correctness checks.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Configuration, owner, and artifacts
+      description: Link manifests, checkpoints, logs, or result summaries as available. Do not include credentials.
