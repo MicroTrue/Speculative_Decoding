@@ -2,7 +2,7 @@
 
 An MLSys course research project investigating whether dependency-aware knowledge distillation can make speculative decoding faster on long-context workloads while preserving short-context performance.
 
-**Status:** research planning and repository setup. This repository contains the proposal, execution plan, and experiment conventions. Model loading, decoding, training, and evaluation are not implemented yet; no experimental results are claimed.
+**Status:** Model preparation and controlled retrieval data generation are available. Decoder, training, and evaluation code are pending.
 
 ## Research question
 
@@ -48,8 +48,8 @@ Record draft–target KL, top-1 agreement, teacher accuracy, proposed/accepted d
 
 ```text
 configs/          Shared experiment manifest template
-models/           Planned model loading and compatibility checks
-data/             Planned prompt generation and dataset preparation
+models/           Pinned snapshot preparation and tokenizer compatibility checks
+data/             Paired retrieval prompt generator and dataset preparation notes
 distillation/     Planned sensitivity scoring, losses, and training
 decoding/         Planned target-only and speculative decoding
 analysis/         Planned mismatch analysis and plotting
@@ -61,12 +61,12 @@ docs/             Milestones and experiment protocol
 .github/          Issue and pull request templates
 ```
 
-The implementation directories are placeholders. Raw data, model weights, checkpoints, caches, and run outputs are excluded from Git.
+Raw data, model weights, checkpoints, caches, and run outputs are excluded from Git.
 
 ## Start here
 
 1. Read the [research proposal](Speculative_Decoding_Research_Proposal.docx) and [two-person execution plan](Speculative_Decoding_Two_Person_Research_Plan%281%29.docx).
-2. Follow the [milestones](docs/roadmap.md) and agree on the [experiment protocol](docs/experiment-protocol.md).
+2. Follow the [milestones](docs/roadmap.md) and agree on the [experiment protocol](docs/experiment-protocol.md). Use the [data preparation commands](data/README.md#paired-retrieval-data) to prepare the pinned snapshots and generate the paired prompts.
 3. Copy `configs/experiment.template.json` to a run-specific config and replace unresolved fields before collecting results.
 4. Establish G1: compatible models, reproducible tokenized inputs, and a target-only/assisted greedy output check. Run a small mismatch pilot before scaling training.
 

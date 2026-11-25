@@ -1,6 +1,6 @@
 # Research roadmap
 
-Derived from the supplied research proposal and two-person execution plan. Every gate below is currently pending. The original plan proposes four weeks; timing depends on hardware and pilot evidence.
+The team will complete the research and final report within four weeks of kickoff. Finish training by Day 19 and timed evaluation by Day 24. Use the Day 14 pilot review to set run sizes and cut extensions so the report and reproducibility package are ready by Day 28. Every gate below is currently pending. [Four-week schedule and scope cuts](distillation-workflow.md#four-week-deadline)
 
 | Stage | Lead | Work | Completion gate |
 | --- | --- | --- | --- |
@@ -8,9 +8,9 @@ Derived from the supplied research proposal and two-person execution plan. Every
 | S2: characterize mismatch | A, with B validating data | Vary context length independently of evidence distance; measure disagreement and teacher accuracy | G2: length/distance curves and evidence for or against dependency-specific mismatch |
 | S3: validate sensitivity | B implements; A validates | Compare full/local teacher distributions; check truncation and position controls | G3: validated sensitivity score and fixed scoring settings |
 | S4: baseline distillation | B trains; A evaluates | Preserve M0; train M1 and M2 with recorded budgets | G4 baseline: baseline checkpoints, configurations, costs, and evaluation |
-| S5: proposed distillation | B trains; A evaluates | Train M3/M4 after G2/G3, starting with a small validation sweep | G4 complete: matched-budget M0–M4 comparison |
+| S5: proposed distillation | B trains; A evaluates | Train M3 after the sensitivity review supports it, starting with a small validation sweep. Train M4 if the schedule allows. | G4 complete: matched-budget M3/M2 comparison when the signal supports training, or a documented pilot decision and completed baseline comparison |
 | S6: systems evaluation | A, with checkpoints from B | Evaluate core workloads against target-only decoding on identical hardware/settings | Reproducible throughput, latency, acceptance, memory, and retention table |
-| S7: ablations and report | Both | Remove weighting/balancing; compare random and disagreement weighting; explain failure cases | G5: final tables, figures, reproducible artifacts, and report |
+| S7: ablations and report | Both | Use M2 as the weighting-removal control. Add balancing, random weighting, and disagreement weighting comparisons if time allows. Explain failure cases. | G5: final tables, figures, reproducible artifacts, and report by Day 28 |
 
 ## First shared milestone
 
